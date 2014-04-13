@@ -48,11 +48,14 @@ $jumbotron-bg: white;
 }
 
 .space{
+	
 	width: 520px;
-	border: solid rgba(34,34,34,0.4);
+	border: solid #2980b9;
 	display: inline-block;
 	height: 100px;
-	margin: 5px;
+	padding: 35px;
+	font-size: 25px;
+	font-color: #2980b9;
 	border-radius: 6px;
 		 	-webkit-transition: .4s;
 
@@ -69,4 +72,24 @@ $jumbotron-bg: white;
   color: #2980b9;
   
   -webkit-transition: 0s;
+}
+
+#del:hover{
+	display:inline;
+}
+
+.trans{
+	text-transform: uppercase;
+	border: 0px;
+	border-color: rgba(0,0,0,0.0);
+	display: inline-block;
+	width: 100px;
+	margin: 1px 4px 1px 4px;
+	height: 100px;
+	text-align: center;
+	padding: 34px 0 0 0;
+	border-radius: 6px;
+	font-size: 25px;
+	color: rgba(0,0,0,0);
+	 	-webkit-transition: .4s;
 }

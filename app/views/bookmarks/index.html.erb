@@ -72,13 +72,16 @@
             <%= link_to 'New Bookmark', new_bookmark_path, class: 'space' %>
           </ul>
           <!--RAILS BOOKMARK LOOP-->
+
+
+
           <% @bookmarks.each do |bookmark| %>
-                <div id=<%= "#{bookmark.key}" -%>>
-                    <div id="del">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <%= link_to 'x', bookmark, method: :delete, data: { confirm: 'Are you sure?' } %>
+                <div id=<%= "#{bookmark.key} trans" -%>>
+                    <div id="del">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <%= link_to 'x', bookmark, method: :delete, data: { confirm: 'Are you sure you want to delete this bookmark?' } %>
                     </div>
                  <div class='bmark' hidden><%= bookmark.url %></div>
                     </br>
-                    <%= link_to "  #{bookmark.key.titleize}  ", 'http://' + bookmark.url, id:bookmark.key %>
+                    <h3 style='display:none'> <%= link_to "  #{bookmark.key.titleize}  ", 'http://' + bookmark.url, id:bookmark.key %></h3>
                 </div>
       
     <% end %>

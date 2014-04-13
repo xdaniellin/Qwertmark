@@ -1,3 +1,26 @@
+<script>
+$(window).keydown(function(e) {
+    if($("#javascript").length!=0){
+
+  key = (e.keyCode) ? e.keyCode : e.which;
+  if (key==32)
+    $('.space').addClass('active');
+  else
+  $('.key.'+key).addClass('active');
+  console.log(key);
+}
+});
+
+$(window).keyup(function(e) {
+    if($("#javascript").length!=0){
+
+  if (key==32)
+    $('.space').removeClass('active');
+  key = (e.keyCode) ? e.keyCode : e.which;
+  $('.key.'+key).removeClass('active');
+
+}}
+</script>
 <div>
      <% if user_signed_in? %>
      	<div class="keyboard">
@@ -90,7 +113,7 @@
             <li class='key 188'>,</li>
           </ul>
           <ul class="row">
-        <%= link_to "Sign up", new_user_registration_path, class: "space btn btn-primary btn-lg" %>
+        <%= link_to "Sign up", new_user_registration_path, class: "space" %>
           </ul>
         </div>
 

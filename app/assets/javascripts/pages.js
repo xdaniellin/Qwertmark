@@ -36,6 +36,7 @@ $(window).keyup(function(e) {
 	$('.key.'+key).removeClass('active');
 
 
+
 var urls = new Array();
 urls[65] = "http://" + $('#a .bmark').text();
 urls[66] = "http://" + $('#b .bmark').text();
