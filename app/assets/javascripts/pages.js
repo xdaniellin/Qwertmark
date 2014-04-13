@@ -51,9 +51,9 @@ console.log(urls[81]);
 	console.log(url);
 	if (url != undefined)
 	{
-		a = window.open(url);
+		a = window.open(url,'_blank');
 		a.blur();
-		window.focus();
+//		window.focus();
 		//window.open(url);
 		}
 	}
