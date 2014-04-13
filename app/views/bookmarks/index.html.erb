@@ -1,48 +1,39 @@
 <style>
-#q {font-size:20px;position:absolute;top:1.5%;left:4%;}
-#w {font-size:20px;position:absolute;top:1.5%;left:14%;}
-#e {font-size:20px;position:absolute;top:1.5%;left:24%;}
-#r {font-size:20px;position:absolute;top:1.5%;left:34%;}
-#t {font-size:20px;position:absolute;top:1.5%;left:44%;}
-#y {font-size:20px;position:absolute;top:1.5%;left:54%;}
-#u {font-size:20px;position:absolute;top:1.5%;left:64%;}
-#i {font-size:20px;position:absolute;top:1.5%;left:74%;}
-#o {font-size:20px;position:absolute;top:1.5%;left:83.8%;}
-#p {font-size:20px;position:absolute;top:1.5%;right:1.5%;}
-#a {font-size:20px;position:absolute;top:24.4%;left:9%;}
-#s {font-size:20px;position:absolute;top:24.4%;left:19%;}
-#d {font-size:20px;position:absolute;top:24.4%;left:29%;}
-#f {font-size:20px;position:absolute;top:24.4%;left:39%;}
-#g {font-size:20px;position:absolute;top:24.4%;left:49%;}
-#h {font-size:20px;position:absolute;top:24.4%;left:59%;}
-#j {font-size:20px;position:absolute;top:24.4%;left:69%;}
-#k {font-size:20px;position:absolute;top:24.4%;left:79%;}
-#l {font-size:20px;position:absolute;top:24.4%;left:89%;}
-#z {font-size:20px;position:absolute;top:49%;left:14%;}
-#x {font-size:20px;position:absolute;top:49%;left:24%;}
-#c {font-size:20px;position:absolute;top:49%;left:34%;}
-#v {font-size:20px;position:absolute;top:49%;left:44%;}
-#b {font-size:20px;position:absolute;top:49%;left:54%;}
-#n {font-size:20px;position:absolute;top:49%;left:64%;}
-#m {font-size:20px;position:absolute;top:49%;left:73.5%;}
-/** del is for X  **/
-#del{
-  font-color:#c0392b;
-
+  #q {font-size:20px;position:absolute;top:1.5%;left:4%;}
+  #w {font-size:20px;position:absolute;top:1.5%;left:14%;}
+  #e {font-size:20px;position:absolute;top:1.5%;left:24%;}
+  #r {font-size:20px;position:absolute;top:1.5%;left:34%;}
+  #t {font-size:20px;position:absolute;top:1.5%;left:44%;}
+  #y {font-size:20px;position:absolute;top:1.5%;left:54%;}
+  #u {font-size:20px;position:absolute;top:1.5%;left:64%;}
+  #i {font-size:20px;position:absolute;top:1.5%;left:74%;}
+  #o {font-size:20px;position:absolute;top:1.5%;left:83.8%;}
+  #p {font-size:20px;position:absolute;top:1.5%;right:1.5%;}
+  #a {font-size:20px;position:absolute;top:24.4%;left:9%;}
+  #s {font-size:20px;position:absolute;top:24.4%;left:19%;}
+  #d {font-size:20px;position:absolute;top:24.4%;left:29%;}
+  #f {font-size:20px;position:absolute;top:24.4%;left:39%;}
+  #g {font-size:20px;position:absolute;top:24.4%;left:49%;}
+  #h {font-size:20px;position:absolute;top:24.4%;left:59%;}
+  #j {font-size:20px;position:absolute;top:24.4%;left:69%;}
+  #k {font-size:20px;position:absolute;top:24.4%;left:79%;}
+  #l {font-size:20px;position:absolute;top:24.4%;left:89%;}
+  #z {font-size:20px;position:absolute;top:49%;left:14%;}
+  #x {font-size:20px;position:absolute;top:49%;left:24%;}
+  #c {font-size:20px;position:absolute;top:49%;left:34%;}
+  #v {font-size:20px;position:absolute;top:49%;left:44%;}
+  #b {font-size:20px;position:absolute;top:49%;left:54%;}
+  #n {font-size:20px;position:absolute;top:49%;left:64%;}
+  #m {font-size:20px;position:absolute;top:49%;left:73.5%;}
+  /** del is for X  **/
+  #del{
+    font-color:#c0392b;
 }
 </style>
 
-
-<!--<h1>Listing bookmarks</h1>-->
 <div id="javascript">
      <% if user_signed_in? %>
       <div class="keyboard">
-        <!--<br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>-->
           <ul class="row">
             <li class='key 81'>q</li>
             <li class='key 87'>w</li>
@@ -76,16 +67,15 @@
             <li class='key 77'>m</li>
             <li class='key 188'>,</li>
           </ul>
+          <!--SPACEBAR-->
           <ul class="row">
-            <li class='space'></li>
+            <%= link_to 'New Bookmark', new_bookmark_path, class: 'space' %>
           </ul>
-        
+          <!--RAILS BOOKMARK LOOP-->
           <% @bookmarks.each do |bookmark| %>
                 <div id=<%= "#{bookmark.key}" -%>>
-
                     <div id="del">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <%= link_to 'x', bookmark, method: :delete, data: { confirm: 'Are you sure?' } %>
                     </div>
-                 <!--<td><%= bookmark.key %></td>-->
                  <div class='bmark' hidden><%= bookmark.url %></div>
                     </br>
                     <%= link_to "  #{bookmark.key.titleize}  ", 'http://' + bookmark.url, id:bookmark.key %>
@@ -95,8 +85,6 @@
 
 
         </div>
-
-
 
 
      <% else %>
@@ -114,4 +102,3 @@
 
 <br>
 
-<%= link_to 'New Bookmark', new_bookmark_path %>

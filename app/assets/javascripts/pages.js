@@ -37,13 +37,13 @@ $(window).keyup(function(e) {
 
 
 var urls = new Array();
-urls[65] = "http://www.google.com";
-urls[83] = "http://www.facebook.com";
-urls[68] = "http://www.quixey.com";
-urls[70] = "http://www.lahacks.com";
-urls[74] = "http://www.nextdoor.com";
-urls[75] = "http://www.gmail.com";
-urls[76] = "http://www.linkedin.com";
+//urls[65] = "http://www.google.com";
+//urls[83] = "http://www.facebook.com";
+//urls[68] = "http://www.quixey.com";
+//urls[70] = "http://www.lahacks.com";
+////urls[74] = "http://www.nextdoor.com";
+//urls[75] = "http://www.gmail.com";
+//urls[76] = "http://www.linkedin.com";
 urls[81] = "http://" + $('#q .bmark').text();
 console.log(urls[81]);
 
