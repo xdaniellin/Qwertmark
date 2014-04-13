@@ -1,0 +1,98 @@
+<div>
+     <% if user_signed_in? %>
+     	<div class="keyboard">
+     		<!--<br>
+     		<br>
+     		<br>
+     		<br>
+     		<br>
+     		<br>-->
+          <ul class="row">
+          	<li class='key 81'>q</li>
+          	<li class='key 87'>w</li>
+          	<li class='key 69'>e</li>
+          	<li class='key 82'>r</li> 
+          	<li class='key 84'>t</li>
+          	<li class='key 89'>y</li>
+          	<li class='key 85'>u</li>
+          	<li class='key 73'>i</li>
+          	<li class='key 79'>o</li>
+          	<li class='key 80'>p</li>
+          </ul>
+          <ul class="row">
+          	<li class='key 65'>a</li>
+          	<li class='key 83'>s</li>
+          	<li class='key 68'>d</li>
+          	<li class='key 70'>f</li>
+          	<li class='key 71'>g</li>
+          	<li class='key 72'>h</li>
+          	<li class='key 74'>j</li>
+          	<li class='key 75'>k</li>
+          	<li class='key 76'>l</li>
+          </ul>
+          <ul class="row">
+          	<li class='key 90'>z</li>
+          	<li class='key 88'>x</li>
+          	<li class='key 67'>c</li>
+          	<li class='key 86'>v</li>
+          	<li class='key 66'>b</li>
+          	<li class='key 78'>n</li>
+          	<li class='key 77'>m</li>
+          	<li class='key 188'>,</li>
+          </ul>
+          <ul class="row">
+          	<li class='space'></li>
+          </ul>
+        </div>
+
+
+
+
+     <% else %>
+     <div class="keyboard">
+        <!--<br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>-->
+          <ul class="row">
+            <li class='key 81'>q</li>
+            <li class='key 87'>w</li>
+            <li class='key 69'>e</li>
+            <li class='key 82'>r</li> 
+            <li class='key 84'>t</li>
+            <li class='key 89'>y</li>
+            <li class='key 85'>u</li>
+            <li class='key 73'>i</li>
+            <li class='key 79'>o</li>
+            <li class='key 80'>p</li>
+          </ul>
+          <ul class="row">
+            <li class='key 65'>a</li>
+            <li class='key 83'>s</li>
+            <li class='key 68'>d</li>
+            <li class='key 70'>f</li>
+            <li class='key 71'>g</li>
+            <li class='key 72'>h</li>
+            <li class='key 74'>j</li>
+            <li class='key 75'>k</li>
+            <li class='key 76'>l</li>
+          </ul>
+          <ul class="row">
+            <li class='key 90'>z</li>
+            <li class='key 88'>x</li>
+            <li class='key 67'>c</li>
+            <li class='key 86'>v</li>
+            <li class='key 66'>b</li>
+            <li class='key 78'>n</li>
+            <li class='key 77'>m</li>
+            <li class='key 188'>,</li>
+          </ul>
+          <ul class="row">
+        <%= link_to "Sign up", new_user_registration_path, class: "space btn btn-primary btn-lg" %>
+          </ul>
+        </div>
+
+  <% end %>  
+</div>

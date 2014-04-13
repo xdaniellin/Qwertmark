@@ -1,0 +1,72 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:400,700);
+
+$body-bg:     rgba(34,34,34,1);
+$font-family-sans-serif: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$navbar-height: 45px;
+$navbar-default-bg: rgba(255,255,255,0.9);
+$navbar-default-brand-color: #2980b9;
+$brand-primary: #c0392b;
+$jumbotron-bg: white;
+
+@import 'bootstrap';
+
+.center {
+     text-align: center;
+}
+
+.navbar-brand {
+     font-weight: bold;
+}
+
+.key{
+	text-transform: uppercase;
+	border: solid;
+	border-color: rgba(34,34,34,0.4);
+	display: inline-block;
+	width: 100px;
+	margin: 1px 4px 1px 4px;
+	height: 100px;
+	text-align: center;
+	padding: 34px 0 0 0;
+	border-radius: 6px;
+	font-size: 25px;
+	color: rgba(34,34,34,0.3);
+	 	-webkit-transition: .4s;
+}
+
+.key:hover{
+	  border: 5px solid #2980b9;
+  color: #2980b9;
+  
+  -webkit-transition: 0s;
+}
+.keyboard{
+	top:20%;
+	left:12%;
+	position: absolute;
+	text-align: center;
+}
+
+.space{
+	width: 520px;
+	border: solid rgba(34,34,34,0.4);
+	display: inline-block;
+	height: 100px;
+	margin: 5px;
+	border-radius: 6px;
+		 	-webkit-transition: .4s;
+
+}
+.space:hover{
+  border: 5px solid #2980b9;
+  color: #2980b9;
+  
+  -webkit-transition: 0s;
+}
+
+.active {
+  border: 5px solid #2980b9;
+  color: #2980b9;
+  
+  -webkit-transition: 0s;
+}
